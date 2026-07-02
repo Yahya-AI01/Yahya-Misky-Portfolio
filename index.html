@@ -555,7 +555,7 @@
                     </div>
                     
                     <div class="hero-description">
-                        <strong>Étudiant ingénieur passionné par la Data Science, l'Intelligence Artificielle et le développement logiciel</strong>
+                        <strong>Élève Ingénieur passionné par la Data Science, l'Intelligence Artificielle et le développement logiciel</strong>
                     </div>
                     <p>Je m'intéresse particulièrement à l'analyse de données, au Machine Learning et aux systèmes décisionnels. Curieux, motivé et orienté résolution de problèmes, j'aime transformer les données en informations utiles afin d'aider à la prise de décision.</p>
                     <p>Au cours de mon parcours académique, j'ai développé des compétences en Python, SQL, Power BI, ETL, Deep Learning, développement web et conception des systèmes d'information.</p>
@@ -710,12 +710,12 @@
         // Formation Data
         const formationData = [
             {
-                title: "Diplôme en Intelligence Artificielle — Option Assistant Data Analyst (Bac+2)",
+                title: "DIPLÔME EN INTELLIGENCE ARTIFICIELLE — OPTION ASSISTANT DATA ANALYST (BAC+2) — CMC RSK",
                 competences: ["Manipulation et gestion des bases de données", "Processus ETL et intégration de données", "Analyse de données et Business Intelligence", "Statistiques et probabilités", "Algorithmes et structures de données", "Machine Learning & Deep Learning", "Visualisation de données avec Python", "Création de tableaux de bord interactifs (Power BI, Dash)", "Langage DAX", "Systèmes décisionnels et Data Warehousing", "Modélisation dimensionnelle avancée", "Développement en Python et langage R", "R Markdown", "Implémentation de solutions BI", "Reconnaissance des menaces et attaques informatiques", "Gestion de projets"],
                 tools: ["Talend", "Google Colab", "Anaconda", "Power BI", "RStudio", "Tableau", "Qlik", "Dash", "APIs", "SQL Workbench / SQL Server", "VS Code", "Bibliothèques Python", "VirtualBox (Ubuntu / Kali Linux)"]
             },
             {
-                title: "Cycle Ingénieur — 1ère Année",
+                title: "Cycle Ingénieur — 1ère Année — Emsi ",
                 competences: ["Conception des systèmes d'information", "SQL / PL-SQL / Oracle", "Développement Web : HTML, CSS, JavaScript", "Systèmes d'exploitation Unix (Ubuntu)", "Compilation et programmation système", "Programmation orientée objet en C++", "Développement PHP avec Laravel", "UML et conception orientée objet", "Développement Java orienté objet", "Programmation linéaire", "Python orienté objet et frameworks", "Réseaux informatiques", "SQL Server", "Mathématiques appliquées et statistiques"],
                 tools: ["Draw.io", "Oracle Database", "VS Code", "Machines virtuelles (Ubuntu)", "Code::Blocks", "Laravel & Composer", "XAMPP", "StarUML", "IntelliJ IDEA", "Excel Solver", "PyCharm", "Zotero", "SQL Server","Cisco Paket Tracer"]
             }
@@ -736,14 +736,97 @@
 
         // Certifications
         const certifications = [
-            { name: "Machine Learning", issuer: "Simplilearn", date: "Jan 2025", icon: "fas fa-brain" },
-            { name: "Data Analytics", issuer: "LinkedIn", date: "Jan 2025", icon: "fas fa-chart-line" },
-            { name: "Cybersecurity", issuer: "Cisco", date: "Jun 2024", icon: "fas fa-shield-alt" },
-            { name: "Problem Solving", issuer: "HackerRank", date: "Jun 2024", icon: "fas fa-code" },
-            { name: "Software Engineering", issuer: "Coursera", date: "Mar 2026", icon: "fas fa-code-branch" },
-            { name: "Python Web Data", issuer: "Coursera", date: "Mar 2026", icon: "fab fa-python" },
-            { name: "Unix Workbench", issuer: "Coursera", date: "2025", icon: "fab fa-unity" }
-        ];
+    {
+        name: "Machine Learning",
+        issuer: "Simplilearn",
+        date: "Jan 2025",
+        icon: "fas fa-brain"
+    },
+    {
+        name: "Data Analytics",
+        issuer: "LinkedIn",
+        date: "Jan 2025",
+        icon: "fas fa-chart-line"
+    },
+    {
+        name: "Introduction to Cybersecurity",
+        issuer: "Cisco",
+        date: "Jun 2024",
+        icon: "fas fa-shield-alt"
+    },
+    {
+        name: "Problem Solving",
+        issuer: "HackerRank",
+        date: "Jun 2024",
+        icon: "fas fa-lightbulb"
+    },
+    {
+        name: "Software Engineering",
+        issuer: "Coursera",
+        date: "Mar 2026",
+        icon: "fas fa-code-branch"
+    },
+    {
+        name: "Python Web Data",
+        issuer: "Coursera",
+        date: "Mar 2026",
+        icon: "fab fa-python"
+    },
+    {
+        name: "Unix Workbench",
+        issuer: "Coursera",
+        date: "2025",
+        icon: "fab fa-linux"
+    },
+    {
+        name: "SQL for Data Science",
+        issuer: "Coursera",
+        date: "2025",
+        icon: "fas fa-database"
+    },
+    {
+        name: "Data Science & Analytics",
+        issuer: "Coursera",
+        date: "2025",
+        icon: "fas fa-chart-bar"
+    },
+    {
+        name: "Introduction to Career Skills in Data Analytics",
+        issuer: "LinkedIn",
+        date: "2025",
+        icon: "fas fa-user-tie"
+    },
+    {
+        name: "Introduction à la programmation orientée objet (C++)",
+        issuer: "Coursera",
+        date: "2025",
+        icon: "fas fa-cubes"
+    },
+    {
+        name: "Interactivity with JavaScript",
+        issuer: "Coursera",
+        date: "2026",
+        icon: "fab fa-js"
+    },
+    {
+        name: "Business Email",
+        issuer: "HP",
+        date: "2026",
+        icon: "fas fa-envelope"
+    },
+    {
+        name: "Social Media Marketing",
+        issuer: "HP",
+        date: "2026",
+        icon: "fas fa-hashtag"
+    },
+    {
+        name: "Basics of Microsoft Power BI",
+        issuer: "Cambridge International Qualifications",
+        date: "2025",
+        icon: "fas fa-chart-pie"
+    }
+];
         const certsGrid = document.getElementById('certsGrid');
         certifications.forEach(cert => {
             const card = document.createElement('div'); card.className = 'cert-card';
@@ -753,16 +836,57 @@
 
         // Projets
         const projects = [
-            { name: "Power BI · Steam Analysis", desc: "Dashboard interactif analysant les tendances du marché gaming.", tech: "Power BI / DAX / Excel" },
-            { name: "FIFA 19 Data Analysis", desc: "Analyse, nettoyage et visualisation des données FIFA 19 avec Python.", tech: "Python / Pandas" },
-            { name: "Northwind · Data Warehouse", desc: "Base de données décisionnelle, ETL, et dashboard SQL.", tech: "SQL / SSIS / Power BI / Talend / ETL / DASH" },
-            { name: "Détection véhicules", desc: "Modèle CNN pour la détection temps réel (YOLO / TensorFlow).", tech: "Deep Learning / OpenCV / YoloV8" },
-            { name: "Gestion bibliothèque SQL", desc: "Système complet de gestion de bibliothèque avec SQL.", tech: "MySQL / Cube Olap "},
-            { name: "Plateforme PFA", desc: "Gestion des Projets de Fin d'Année avec Java, SQL Server, JS.", tech: "Java / SQL Server/ Python / AI / HTML CSS JS / CRUD" },
-            { name: "Publication scientifique", desc: "Plateforme Laravel, PHP, SQL, JS pour articles scientifiques.", tech: "Laravel / PHP / Html Css Js / CRUD" },
-            { name: "Analyse SGMB", desc: "SQL, Excel DAX, Power BI pour analyse microscop.", tech: "SQL Workbench-Server / Power BI / DAX" },
-            { name: "Stage Barouma-Tours", desc: "Nettoyage Excel/DAX et visualisation Power BI.", tech: "Excel / DAX / Power BI" }
-        ];
+    {
+        name: "Power BI · Steam Analysis",
+        desc: "Dashboard interactif analysant les tendances et indicateurs clés du marché gaming à partir des données Steam.",
+        tech: "Power BI / DAX / Excel"
+    },
+    {
+        name: "FIFA 19 Data Analysis",
+        desc: "Analyse, nettoyage et visualisation des données FIFA 19 avec Python.",
+        tech: "Python / Pandas / Matplotlib / Seaborn"
+    },
+    {
+        name: "Northwind · Data Warehouse",
+        desc: "Conception d'un entrepôt de données basé sur Northwind, mise en place des processus ETL et développement de tableaux de bord décisionnels.",
+        tech: "SQL / SSIS / Power BI / Talend / ETL / Dashboard"
+    },
+    {
+        name: "Détection véhicules",
+        desc: "Développement d'un modèle de vision par ordinateur pour la détection automatique de véhicules et d'objets dans des images et vidéos.",
+        tech: "Deep Learning / TensorFlow / OpenCV / YOLOv8"
+    },
+    {
+        name: "Gestion bibliothèque SQL",
+        desc: "Conception et implémentation d'une base de données relationnelle pour la gestion des ouvrages, emprunts et utilisateurs.",
+        tech: "MySQL / SQL / UML / CRUD"
+    },
+    {
+        name: "Plateforme PFA",
+        desc: "Développement d'une plateforme de gestion des projets de fin d'année avec intégration de fonctionnalités basées sur l'IA.",
+        tech: "Java / SQL Server / Python / AI / HTML / CSS / JS / CRUD"
+    },
+    {
+        name: "Publication scientifique",
+        desc: "Développement d'une plateforme permettant la gestion et le suivi des publications scientifiques.",
+        tech: "Laravel / PHP / MySQL / HTML / CSS / JS / CRUD"
+    },
+    {
+        name: "Plateforme de gestion des réclamations",
+        desc: "Conception d'une application permettant la centralisation et le suivi des réclamations des utilisateurs.",
+        tech: "Laravel / PHP / MySQL / HTML / CSS / JS / CRUD"
+    },
+    {
+        name: "Stage Barouma-Tours",
+        desc: "Nettoyage des données Excel, modélisation DAX et visualisation avec Power BI.",
+        tech: "Excel / DAX / Power BI"
+    },
+    {
+        name: "Optimisation du petit-déjeuner (Recherche Opérationnelle)",
+        desc: "Modélisation d'un problème d'optimisation pour minimiser les coûts et optimiser l'utilisation des ressources à l'aide de la programmation linéaire.",
+        tech: "Python / Programmation Linéaire / Recherche Opérationnelle"
+    }
+];
         const projectsGrid = document.getElementById('projectsGrid');
         projects.forEach(proj => {
             const card = document.createElement('div'); card.className = 'project-card';
