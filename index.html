@@ -31,7 +31,6 @@
   --a:#5B3DF0;--b:#E5326A;--c:#0BA98A;--card:rgba(20,20,58,.04);color-scheme:light
 }
 *,*::before,*::after{box-sizing:border-box}
-/* ===== ANTI-SCROLL HORIZONTAL GLOBAL ===== */
 html,body{
   max-width:100%;
   overflow-x:hidden!important;
@@ -72,8 +71,6 @@ nav ul a:hover,nav ul a.on{background:var(--ink);color:var(--bg)}
 .tog{border:1px solid var(--line);background:color-mix(in srgb,var(--bg) 72%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:var(--ink);width:44px;height:44px;border-radius:50%;cursor:pointer;font:inherit;font-size:1.1rem;flex-shrink:0;display:grid;place-items:center}
 @media(max-width:700px){.logo{display:none}nav ul a{padding:7px 9px;font-size:.78rem}nav{padding:10px 12px}}
 @media(max-width:380px){nav ul a{padding:6px 7px;font-size:.72rem}}
-
-/* ===== HERO ===== */
 .hero{
   min-height:100svh;min-height:100dvh;
   display:flex;flex-direction:column;justify-content:center;
@@ -196,8 +193,6 @@ footer{padding:30px 20px calc(50px + env(safe-area-inset-bottom,0px));color:var(
 .prow button:hover{background:var(--ink);color:var(--bg)}
 @media(max-width:600px){.prow{flex-wrap:wrap}.prow p{min-width:100%;order:3;font-size:.88rem}.prow span{margin-left:auto}}
 .cert.hide{display:none}
-
-/* ===== PHOTO ===== */
 .photo{
   position:absolute;z-index:-1;right:calc(50% - 50vw + 12vw);top:130px;
   width:clamp(220px,24.5vw,470px);pointer-events:none
@@ -208,10 +203,7 @@ footer{padding:30px 20px calc(50px + env(safe-area-inset-bottom,0px));color:var(
 @keyframes float{50%{transform:translateY(-14px)}}
 @keyframes spinr{to{transform:translate(-50%,-87%) rotate(360deg)}}
 @media(min-width:901px){.intro{max-width:min(40em,50vw)}}
-
-/* ===== MOBILE / TABLETTE (≤ 900px) ===== */
 @media(max-width:900px){
-  /* Hero en colonne : photo EN PREMIER, puis Bienvenue, puis Yahya Misky */
   .hero{
     display:flex;
     flex-direction:column;
@@ -232,7 +224,6 @@ footer{padding:30px 20px calc(50px + env(safe-area-inset-bottom,0px));color:var(
   }
   .hero > .photo::after{width:108%;animation:none;transform:translate(-50%,-89.1%)}
   .hero > .photo img{animation:none}
-  /* Yahoo Misky sur une seule ligne */
   .name{
     font-size:clamp(2rem,10.5vw,4rem)!important;
     white-space:nowrap!important;
@@ -244,7 +235,6 @@ footer{padding:30px 20px calc(50px + env(safe-area-inset-bottom,0px));color:var(
   }
   .name .row{display:inline-block!important;padding-bottom:0}
   .name .row+.row{margin-left:.15em!important}
-  /* Réduire le reste du hero */
   .hello{margin-bottom:12px;font-size:.9rem}
   .sub{margin-top:20px;font-size:1rem}
   .role{font-size:1.1rem}
@@ -254,8 +244,6 @@ footer{padding:30px 20px calc(50px + env(safe-area-inset-bottom,0px));color:var(
   .marquee{transform:rotate(-1deg);margin:16px 0 0}
   h2{margin-bottom:28px}
 }
-
-/* ===== PETITS TÉLÉPHONES (≤ 480px) ===== */
 @media(max-width:480px){
   .wrap{padding:0 14px}
   .name{font-size:clamp(1.8rem,11vw,3.2rem)!important}
@@ -279,13 +267,10 @@ footer{padding:30px 20px calc(50px + env(safe-area-inset-bottom,0px));color:var(
   .bars{height:150px}
   .panelc{padding:16px}
 }
-
-/* ===== TRÈS PETITS (≤ 360px) ===== */
 @media(max-width:360px){
   .name{font-size:clamp(1.5rem,10vw,2.6rem)!important}
   .hero > .photo{width:min(58vw,160px)}
 }
-
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   .name .ch{transform:none}
@@ -373,7 +358,6 @@ input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus
 (function(){
 "use strict";
 
-/* ---------- SÉCURITÉ LÉGÈRE (sans casser le site) ---------- */
 function sanitize(str){
   return String(str).replace(/[<>&"']/g,function(c){
     return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&#39;'}[c];
@@ -384,7 +368,6 @@ var root=document.documentElement,fine=matchMedia("(hover:hover)").matches,reduc
 var $=function(i){return document.getElementById(i)};
 var isTouch = matchMedia("(pointer:coarse)").matches;
 
-/* données */
 var forms=[
 {t:"Cycle ingénieur – 1ère année",w:"EMSI",m:["Conception des systèmes d’information","SQL / PL-SQL / Oracle","HTML, CSS, JavaScript","Unix (Ubuntu)","Programmation système","C++ orienté objet","PHP avec Laravel","UML","Java orienté objet","Programmation linéaire","Python orienté objet","Réseaux informatiques","SQL Server","Mathématiques appliquées et statistiques"],o:["Draw.io","Oracle Database","VS Code","Machines virtuelles","Code::Blocks","Laravel & Composer","XAMPP","StarUML","IntelliJ IDEA","Excel Solver","PyCharm","Zotero","Cisco Packet Tracer"]},
 {t:"Diplôme en Intelligence Artificielle – Assistant Data Analyst (Bac+2)",w:"CMC RSK",m:["Bases de données","ETL et intégration","Analyse de données et BI","Statistiques et probabilités","Algorithmes et structures de données","Machine Learning & Deep Learning","Visualisation avec Python","Tableaux de bord (Power BI, Dash)","Langage DAX","Data Warehousing","Modélisation dimensionnelle","Python et R","R Markdown","Solutions BI","Menaces et attaques informatiques","Gestion de projets"],o:["Talend","Google Colab","Anaconda","Power BI","RStudio","Tableau","Qlik","Dash","APIs","SQL Server","VS Code","Bibliothèques Python","VirtualBox (Ubuntu / Kali)"]}];
